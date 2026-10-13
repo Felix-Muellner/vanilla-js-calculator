@@ -11,7 +11,8 @@
 ## States
 
 - Initial
-- AccumulatingDigits
+- AccumulatingFirstNumberDigits
+- AccumulatingSecondNumberDigits
 - OperatorPending
 - ResultDisplayed
 
@@ -26,11 +27,16 @@
 | Initial | Evaluate | Initial | Ignore |
 | Initial | Clear All | Initial | Ignore |
 | Initial | Delete | Initial | Ignore |
-| AccumulatingDigits | Digits | | |
-| AccumulatingDigits | Operators | | |
-| AccumulatingDigits | Evaluate | | |
-| AccumulatingDigits | Clear All | | |
-| AccumulatingDigits | Delete | | |
+| AccumulatingFirstNumberDigits | Digits | | |
+| AccumulatingFirstNumberDigits | Operators | | |
+| AccumulatingFirstNumberDigits | Evaluate | | |
+| AccumulatingFirstNumberDigits | Clear All | | |
+| AccumulatingFirstNumberDigits | Delete | | |
+| AccumulatingSecondNumberDigits | Digits | | |
+| AccumulatingSecondNumberDigits | Operators | | |
+| AccumulatingSecondNumberDigits | Evaluate | | |
+| AccumulatingSecondNumberDigits | Clear All | | |
+| AccumulatingSecondNumberDigits | Delete | | |
 | OperatorPending | Digits | | |
 | OperatorPending | Operators | | |
 | OperatorPending | Evaluate | | |
