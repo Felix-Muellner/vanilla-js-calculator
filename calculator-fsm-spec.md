@@ -10,6 +10,11 @@
 
 ## States
 
+- Initial
+- AccumulatingDigits
+- OperatorPending
+- ResultDisplayed
+
 ## State Transition Table
 
 ## State Diagram
