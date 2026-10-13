@@ -22,26 +22,26 @@
 
 | Current State | Input | Next State | Action |
 |-|-|-|-|
-| Initial | Digits | AccumulatingDigits | Store Digit |
+| Initial | Digits | AccumulatingFirstNumberDigits | Store Digit |
 | Initial | Operators | OperatorPending | Store Operator |
 | Initial | Evaluate | Initial | Ignore |
 | Initial | Clear All | Initial | Ignore |
 | Initial | Delete | Initial | Ignore |
-| AccumulatingFirstNumberDigits | Digits | | |
-| AccumulatingFirstNumberDigits | Operators | | |
-| AccumulatingFirstNumberDigits | Evaluate | | |
-| AccumulatingFirstNumberDigits | Clear All | | |
-| AccumulatingFirstNumberDigits | Delete | | |
-| AccumulatingSecondNumberDigits | Digits | | |
-| AccumulatingSecondNumberDigits | Operators | | |
+| AccumulatingFirstNumberDigits | Digits | AccumulatingFirstNumberDigits | Store Digit |
+| AccumulatingFirstNumberDigits | Operators | OperatorPending | Store Operator |
+| AccumulatingFirstNumberDigits | Evaluate | AccumulatingFirstNumberDigits | Ignore |
+| AccumulatingFirstNumberDigits | Clear All | Initial | Clear All |
+| AccumulatingFirstNumberDigits | Delete | !!!AccumulatingFirstNumberDigits!!! | Delete last Digit |
+| OperatorPending | Digits | AccumulatingSecondNumberDigits | Store Digit |
+| OperatorPending | Operators | OperatorPending | Ignore |
+| OperatorPending | Evaluate | OperatorPending | Ignore |
+| OperatorPending | Clear All | Initial | Clear All |
+| OperatorPending | Delete | AccumulatingFirstNumberDigits | Delete Operator |
+| AccumulatingSecondNumberDigits | Digits | AccumulatingSecondNumberDigits | Store Digits |
+| AccumulatingSecondNumberDigits | Operators | AccumulatingSecondNumberDigits | Ignore |
 | AccumulatingSecondNumberDigits | Evaluate | | |
 | AccumulatingSecondNumberDigits | Clear All | | |
 | AccumulatingSecondNumberDigits | Delete | | |
-| OperatorPending | Digits | | |
-| OperatorPending | Operators | | |
-| OperatorPending | Evaluate | | |
-| OperatorPending | Clear All | | |
-| OperatorPending | Delete | | |
 | ResultDisplayed | Digits | | |
 | ResultDisplayed | Operators | | |
 | ResultDisplayed | Evaluate | | |
