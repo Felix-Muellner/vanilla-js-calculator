@@ -17,4 +17,9 @@
 
 ## State Transition Table
 
+> This Table consists of the cartesian product of the **Inputs** and **States**
+
+| Current State | Input | Next State | Action |
+|-|-|-|-|
+
 ## State Diagram
