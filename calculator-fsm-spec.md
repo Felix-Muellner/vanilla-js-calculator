@@ -21,5 +21,25 @@
 
 | Current State | Input | Next State | Action |
 |-|-|-|-|
+| Initial | Digits | AccumulatingDigits | Store Digit |
+| Initial | Operators | OperatorPending | Store Operator |
+| Initial | Evaluate | Initial | Ignore |
+| Initial | Clear All | Initial | Ignore |
+| Initial | Delete | Initial | Ignore |
+| AccumulatingDigits | Digits | | |
+| AccumulatingDigits | Operators | | |
+| AccumulatingDigits | Evaluate | | |
+| AccumulatingDigits | Clear All | | |
+| AccumulatingDigits | Delete | | |
+| OperatorPending | Digits | | |
+| OperatorPending | Operators | | |
+| OperatorPending | Evaluate | | |
+| OperatorPending | Clear All | | |
+| OperatorPending | Delete | | |
+| ResultDisplayed | Digits | | |
+| ResultDisplayed | Operators | | |
+| ResultDisplayed | Evaluate | | |
+| ResultDisplayed | Clear All | | |
+| ResultDisplayed | Delete | | |
 
 ## State Diagram
